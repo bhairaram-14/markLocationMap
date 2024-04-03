@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-grid slds-gutters slds-m-bottom_medium">
+        <div class="slds-col">
+            <lightning-input type="number" step="any" label="Latitude" name="latitude" placeholder="enter latitude " required onchange={inputCoordination}> </lightning-input>
+        </div>
+        <div class="slds-col">
+            <lightning-input type="number" step="any" label="Longitude" name="longitude"  placeholder="enter latitude " required onchange={inputCoordination}> </lightning-input>
+        </div>
+    </div>
+    <template lwc:if={isCoordinationValid}>
+        <lightning-button class="slds-m-bottom_medium  slds-align_absolute-center" label="Locate In Map" onclick={locateInMap}></lightning-button>
+    </template>
+    <div class="slds-m-around_medium">
+        <c-locate-in-map class="slds-m-top_medium"> </c-locate-in-map>
+    </div>
+        
+</template>

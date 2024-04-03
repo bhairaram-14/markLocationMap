@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title={cmpTitle} icon-name="action:map">
+        <template lwc:if={showMap}>
+          <lightning-map center map-markers={mapMarkers} zoom-level="5" markers-title="Locations" style="height: 70vh;"></lightning-map>
+        </template>
+        <template lwc:else>
+          <span class={errorMessageClass}>
+            <p>{errorMessage}</p>
+          </span>
+        </template>
+    </lightning-card>
+</template>
